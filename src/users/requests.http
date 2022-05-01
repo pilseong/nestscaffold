@@ -1,0 +1,50 @@
+### find one user
+GET http://localhost:3000/auth/1
+
+
+### create user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "philipp@gmail.com",
+  "password": "test123",
+  "admin": true
+}
+
+### find with email
+GET http://localhost:3000/auth?email=pilseong@gmail.com
+
+
+### delete a user
+DELETE http://localhost:3000/auth/1
+
+### update user
+PATCH  http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+  "password": "test123"
+}
+
+### sign in
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "philipp@gmail.com",
+  "password": "test123"
+}
+
+### check whoami
+GET http://localhost:3000/auth/whoami
+
+### sign out
+POST http://localhost:3000/auth/signout
+
+
+### set a color
+GET http://localhost:3000/auth/colors/reda
+
+### set a color
+GET http://localhost:3000/auth/colors
